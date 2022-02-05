@@ -1,4 +1,5 @@
 #include "SHA.h"
+#include <iostream>
 
 int main()
 {

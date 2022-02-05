@@ -1,12 +1,9 @@
 #pragma once
 
-#include <iostream>
-#include <bitset>
 #include <bit>
 #include <vector>
 #include <numeric>
 #include <sstream>
-#include <iterator>
 #include "Helpers.h"
 
 using Helpers::mod_add;
@@ -18,9 +15,11 @@ private:
     std::vector<std::uint8_t> preprocessing(std::string& data);
 	std::vector<std::uint32_t> create_message_schedule(std::vector<std::uint8_t>&);
 
-	void compression(std::vector<std::uint32_t>& message);
+    void compression(std::vector<std::uint32_t>& message);
     void reset();
+
     std::string finalize();
+
     std::uint32_t
         h0 = 0x6a09e667,
         h1 = 0xbb67ae85,
